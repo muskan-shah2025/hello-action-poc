@@ -1,0 +1,14 @@
+name: Test Hello Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./  # Use the local action
+        with:
+          name: "GitHub User"
